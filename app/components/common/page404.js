@@ -14,7 +14,9 @@ class Page404 extends Component<Props, State> {
     return (
       <div>
         <p>Page Not Found!</p>
-        <Link to="/">首页</Link>
+        <p>
+          <Link to="/">Home</Link>
+        </p>
       </div>
     )
   }
