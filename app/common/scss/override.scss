@@ -1,0 +1,18 @@
+@import './color.scss';
+
+header {
+  .MuiBottomNavigation-root {
+    height: 50px !important;
+    background-color: $amBlue !important;
+  }
+  .MuiBottomNavigationAction-root {
+    width: 120px;
+    color: $fff !important;
+  }
+  .MuiBottomNavigationAction-root.Mui-selected {
+    color: $amPink !important;
+  }
+  .MuiBottomNavigationAction-label {
+    font-size: 14px !important;
+  }
+}
