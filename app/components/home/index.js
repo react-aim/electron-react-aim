@@ -5,7 +5,7 @@ import { observer } from 'mobx-react';
 import Button from '@material-ui/core/Button';
 
 import Store from '@store/home/store';
-import '@lib/dot-bg';
+// import '@lib/dot-bg';
 
 const store = new Store();
 
@@ -16,18 +16,13 @@ type State = {};
 class Home extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.ref = React.createRef();
   }
 
-  componentDidMount() {
-    console.log(this.ref);
-  }
-
-  onIncrement = (value) => store.increment(value);
+  onIncrement = (value: number) => store.increment(value);
 
   render() {
     return (
-      <div ref={this.ref}>
+      <div>
         <h3>Home</h3>
         <ul>
           <li>
