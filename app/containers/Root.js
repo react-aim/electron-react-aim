@@ -2,7 +2,9 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
+
 import Routes from '../Routes';
+import '../common/scss/index.scss';
 
 type Props = {
   store: {},
