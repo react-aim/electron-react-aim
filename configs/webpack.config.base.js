@@ -4,6 +4,8 @@
 
 import path from 'path';
 import webpack from 'webpack';
+
+import paths from './paths';
 import { dependencies } from '../package.json';
 
 export default {
@@ -34,7 +36,28 @@ export default {
    * Determine the array of extensions that should be used to resolve modules.
    */
   resolve: {
-    extensions: ['.js', '.jsx', '.json']
+    extensions: ['.js', '.jsx', '.json'],
+    alias: {
+      '@': paths.app,
+      '@common': paths.appCommon,
+      '@commonComp': paths.appCommonComp,
+      '@commonScss': paths.appCommonScss,
+      '@commonStore': paths.appCommonStore,
+      '@commonStyled': paths.appCommonStyled,
+      '@comp': paths.appComp,
+      '@con': paths.appCon,
+      '@scss': paths.appScss,
+      '@store': paths.appStore,
+      '@styled': paths.appStyled,
+      '@util': paths.appUtil,
+      '@lib': paths.appLib,
+      '@tool': paths.appTool,
+      '@static': paths.appStatic,
+      '@icon': paths.appIcon,
+      '@image': paths.appImage,
+      '@photo': paths.appPhoto,
+      '@music': paths.appMusic,
+    },
   },
 
   plugins: [

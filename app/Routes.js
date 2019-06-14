@@ -1,11 +1,11 @@
 import React from 'react';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 
-import App from './containers/App';
-import Home from './components/home';
-import Setting from './components/setting';
-import Other from './components/other';
-import Page404 from './components/common/page404';
+import App from '@con/App';
+import Home from '@comp/home';
+import Setting from '@comp/setting';
+import Other from '@comp/other';
+import Page404 from '@comp/common/page404';
 
 export default () => (
   <App>

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { observer } from 'mobx-react';
 import Button from '@material-ui/core/Button';
 
-import Store from '../../store/home/store';
+import Store from '@store/home/store';
 
 const store = new Store();
 

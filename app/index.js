@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
 import { render } from 'react-dom';
 import { AppContainer as ReactHotAppContainer } from 'react-hot-loader';
-import Root from './containers/Root';
-import { configureStore, history } from './store/configureStore';
+import Root from '@con/Root';
+import { configureStore, history } from '@store/configureStore';
 
 const store = configureStore();
 
@@ -16,9 +16,9 @@ render(
 );
 
 if (module.hot) {
-  module.hot.accept('./containers/Root', () => {
+  module.hot.accept('@con/Root', () => {
     // eslint-disable-next-line global-require
-    const NextRoot = require('./containers/Root').default;
+    const NextRoot = require('@con/Root').default;
     render(
       <AppContainer>
         <NextRoot store={store} history={history} />
