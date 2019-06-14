@@ -37,72 +37,50 @@ export default merge.smart(baseConfig, {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              publicPath: './'
+              publicPath: './',
             }
           },
-          {
-            loader: 'css-loader',
-          },
-          {
-            loader: 'postcss-loader',
-          },
+          'css-loader',
+          'postcss-loader',
         ]
       },
       // Pipe other styles through css modules and append to style.css
       {
         test: /^((?!\.global).)*\.css$/,
         use: [
-          {
-            loader: MiniCssExtractPlugin.loader
-          },
-          {
-            loader: 'css-loader',
-          },
-          {
-            loader: 'postcss-loader',
-          },
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
         ]
       },
       // Add SASS support  - compile all .global.scss files and pipe it to style.css
       {
         test: /\.global\.(scss|sass)$/,
         use: [
-          {
-            loader: MiniCssExtractPlugin.loader
-          },
-          {
-            loader: 'css-loader',
-          },
-          {
-            loader: 'postcss-loader',
-          },
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
           {
             loader: 'sass-loader',
             options: {
               sourceMap: true
             }
-          }
+          },
         ]
       },
       // Add SASS support  - compile all other .scss files and pipe it to style.css
       {
         test: /^((?!\.global).)*\.(scss|sass)$/,
         use: [
-          {
-            loader: MiniCssExtractPlugin.loader
-          },
-          {
-            loader: 'css-loader',
-          },
-          {
-            loader: 'postcss-loader',
-          },
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
           {
             loader: 'sass-loader',
             options: {
               sourceMap: true
             }
-          }
+          },
         ]
       },
       // WOFF Font
