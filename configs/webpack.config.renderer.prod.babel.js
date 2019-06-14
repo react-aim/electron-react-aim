@@ -42,10 +42,10 @@ export default merge.smart(baseConfig, {
           },
           {
             loader: 'css-loader',
-            options: {
-              sourceMap: true
-            }
-          }
+          },
+          {
+            loader: 'postcss-loader',
+          },
         ]
       },
       // Pipe other styles through css modules and append to style.css
@@ -57,12 +57,10 @@ export default merge.smart(baseConfig, {
           },
           {
             loader: 'css-loader',
-            options: {
-              modules: true,
-              localIdentName: '[name]__[local]__[hash:base64:5]',
-              sourceMap: true
-            }
-          }
+          },
+          {
+            loader: 'postcss-loader',
+          },
         ]
       },
       // Add SASS support  - compile all .global.scss files and pipe it to style.css
@@ -74,10 +72,9 @@ export default merge.smart(baseConfig, {
           },
           {
             loader: 'css-loader',
-            options: {
-              sourceMap: true,
-              importLoaders: 1
-            }
+          },
+          {
+            loader: 'postcss-loader',
           },
           {
             loader: 'sass-loader',
@@ -96,12 +93,9 @@ export default merge.smart(baseConfig, {
           },
           {
             loader: 'css-loader',
-            options: {
-              modules: true,
-              importLoaders: 1,
-              localIdentName: '[name]__[local]__[hash:base64:5]',
-              sourceMap: true
-            }
+          },
+          {
+            loader: 'postcss-loader',
           },
           {
             loader: 'sass-loader',

@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import styles from './Counter.css';
 import routes from '../constants/routes';
 
+import './main.scss';
+
 type Props = {
   increment: () => void,
   incrementIfOdd: () => void,
@@ -25,7 +27,7 @@ export default class Counter extends Component<Props> {
     } = this.props;
     return (
       <div>
-        <div className={styles.backButton} data-tid="backButton">
+        <div data-tid="backButton">
           <Link to={routes.HOME}>
             <i className="fa fa-arrow-left fa-3x" />
           </Link>
@@ -33,7 +35,7 @@ export default class Counter extends Component<Props> {
         <div className={`counter ${styles.counter}`} data-tid="counter">
           {counter}
         </div>
-        <div className={styles.btnGroup}>
+        <div>
           <button
             className={styles.btn}
             onClick={increment}

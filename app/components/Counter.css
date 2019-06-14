@@ -1,5 +1,5 @@
-.backButton {
-  position: absolute;
+h2 {
+  margin: 0;
 }
 
 .counter {
@@ -9,13 +9,6 @@
   font-size: 10rem;
   font-weight: bold;
   letter-spacing: -0.025em;
-}
-
-.btnGroup {
-  position: relative;
-  top: 500px;
-  width: 480px;
-  margin: 0 auto;
 }
 
 .btn {
